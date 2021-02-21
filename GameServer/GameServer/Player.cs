@@ -29,21 +29,21 @@ namespace GameServer
         public void Update()
         {
             Vector2 _inputDirection = Vector2.Zero;
-            if (inputs[0])
+            if (inputs[0])  // W
             {
                 _inputDirection.Y += 1;
             }
-            if (inputs[1])
-            {
-                _inputDirection.Y -= 1;
-            }
-            if (inputs[2])
+            if (inputs[1])  // A
             {
                 _inputDirection.X += 1;
             }
-            if (inputs[3])
+            if (inputs[2])  // S
             {
                 _inputDirection.Y -= 1;
+            }
+            if (inputs[3])  // D
+            {
+                _inputDirection.X -= 1;
             }
 
             Move(_inputDirection);
